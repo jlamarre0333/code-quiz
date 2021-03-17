@@ -5,46 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
     <title>Code Quiz</title>
 </head>
 
 <body>
+    
+    <label id="timer">Time: 0</label>
+    <section class="startgame-container" id="start-game-container">
+
+        <h1>Coding Quiz Challenge?</h1>
+        <h2>Try to answer the following code related questions within the time limit</h2>
+        <button id="start">Start Quiz</button>
+    </section>
 
 
-    <main>
 
-        <section class="startgame-container">
-
-            <h1>Coding Quiz Challenge?</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facilis vitae similique accusamus sed
-                necessitatibus perspiciatis, impedit quaerat, veniam corrupti ad excepturi! Minus minima fugit iste
-                voluptatum explicabo mollitia necessitatibus.</p>
-
+        <section class="question-section hidden" id="question-section">
+            <h2 id="question"></h2>
+            <button id="option1" value="1"></button>
+            <button id="option2" value="2"></button>
+            <button id="option3" value="3"></button>
+            <button id="option4" value="4"></button>
+            <br />
+            <label id="question-result"></label>
         </section>
 
-        <label id="timer">0:75</label>
-        <button id="start">Start Quiz</button>
-
-    </main>
-
-    <section class="quiz-container" id="questions-block">
 
 
-        <form id="question-form" class="hidden">
-            <h2 id="question"></h2>
-            <button id="option1" type="submit"></button>
-            <button id="option2" type="submit"></button>
-            <button id="option3" type="submit"></button>
-            <button id="option4" type="submit"></button>
-
-
-        </form>
-
-        <button id="next">next</button>
-
-
-    </section>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js" type="module"></script>
 </body>
 
 </html>

@@ -1,8 +1,9 @@
-const questionForm = document.getElementById('question-form')
+const questionSection = document.getElementById('question-section')
 const timerLabel = document.getElementById('timer')
 const startButton = document.getElementById("start")
 const question = document.getElementById("question")
-const nextButton = document.getElementById('next')
+const startGameContainer = document.getElementById("start-game-container")
+const userResult = document.getElementById("question-result")
 
 const option1 = document.getElementById('option1')
 const option2 = document.getElementById('option2')
@@ -12,6 +13,7 @@ const option4 = document.getElementById('option4')
 
 
 let currentQuestionIndex = 0;
+let totalTime = 75;
 
 const quizItems = [{
     q: "How much am I going to make as a dev next year",
@@ -67,18 +69,31 @@ function updateQuestion() {
 
 
 function handleSubmit(event) {
-    event.preventDefault();
+    
+
+    const userChoice = event.target.value;
 
     const currentQuestion = quizItems[currentQuestionIndex]
-    console.log('handle submit called', event.submitter.value)
+
+    if (userChoice === currentQuestion.a) {
+        userResult.textContent = "Correct"
+    } else {
+        userResult.textContent = "Wrong"
+        totalTime = totalTime - 10;
+    }
+
+    currentQuestionIndex++;
+    updateQuestion();
 }
 
 function startQuiz() {
 
-    let totalTime = 75;
-    questionForm.classList.remove("hidden")
+    
+    questionSection.classList.remove("hidden")
+    startGameContainer.classList.add("hidden")
+    
     const timer = setInterval(function () {
-        timerLabel.textContent = totalTime + "seconds";
+        timerLabel.textContent = "Time: " + totalTime ;
         totalTime--;
 
         if (totalTime === -1) {
@@ -89,14 +104,14 @@ function startQuiz() {
     }, 1000)
 }
 
-function nextQuestion() {
-    currentQuestionIndex++;
-    updateQuestion();
-}
 
-nextButton.addEventListener("click", nextQuestion)
-questionForm.addEventListener('submit', handleSubmit)
+
 startButton.addEventListener('click', startQuiz)
+
+option1.addEventListener('click', handleSubmit)
+option2.addEventListener('click', handleSubmit)
+option3.addEventListener('click', handleSubmit)
+option4.addEventListener('click', handleSubmit)
 
 
 updateQuestion();
