@@ -9,41 +9,39 @@
 </head>
 
 <body>
-    <section>
 
-        <h1>Coding Quiz Challenge?</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facilis vitae similique accusamus sed
-            necessitatibus perspiciatis, impedit quaerat, veniam corrupti ad excepturi! Minus minima fugit iste
-            voluptatum explicabo mollitia necessitatibus.</p>
-
-    </section>
 
     <main>
 
-        <section>
-            <h2>
-                Inside which HTML element do we put the JavaScript?
-            </h2>
+        <section class="startgame-container">
 
-            <ul>
-                <li>
-                    <button>script</button>
-                </li>
-                <li>
-                    <button>js</button>
-                </li>
-                <li>
-                    <button>javascript</button>
-                </li>
-                <button>scripting</button>
-                </li>
-            </ul>
-
+            <h1>Coding Quiz Challenge?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facilis vitae similique accusamus sed
+                necessitatibus perspiciatis, impedit quaerat, veniam corrupti ad excepturi! Minus minima fugit iste
+                voluptatum explicabo mollitia necessitatibus.</p>
 
         </section>
 
+        <label id="timer">0:75</label>
+        <button id="start">Start Quiz</button>
+
     </main>
 
+    <section class="quiz-container" id="questions-block">
+        <h2 id="question">
+            Inside which HTML element do we put the JavaScript?
+        </h2>
+
+        <form id="question-form">
+            <button id="option1" type="submit">script</button>
+            <button id="option2" type="submit">script</button>
+            <button id="option3" type="submit">script</button>
+            <button id="option4" type="submit">script</button>
+        </form>
+
+
+    </section>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
