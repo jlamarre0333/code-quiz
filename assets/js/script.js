@@ -9,6 +9,8 @@ const option2 = document.getElementById('option2')
 const option3 = document.getElementById('option3')
 const option4 = document.getElementById('option4')
 
+
+
 let currentQuestionIndex = 0;
 
 const quizItems = [{
@@ -43,7 +45,9 @@ const quizItems = [{
 }]
 
 
+
 function updateQuestion() {
+
     const currentQuestion = quizItems[currentQuestionIndex]
 
     option1.value = currentQuestion.options[0]
@@ -64,13 +68,15 @@ function updateQuestion() {
 
 function handleSubmit(event) {
     event.preventDefault();
+
+    const currentQuestion = quizItems[currentQuestionIndex]
     console.log('handle submit called', event.submitter.value)
 }
 
-function startTimer() {
+function startQuiz() {
 
     let totalTime = 75;
-
+    questionForm.classList.remove("hidden")
     const timer = setInterval(function () {
         timerLabel.textContent = totalTime + "seconds";
         totalTime--;
@@ -90,7 +96,7 @@ function nextQuestion() {
 
 nextButton.addEventListener("click", nextQuestion)
 questionForm.addEventListener('submit', handleSubmit)
-startButton.addEventListener('click', startTimer)
+startButton.addEventListener('click', startQuiz)
 
 
 updateQuestion();
