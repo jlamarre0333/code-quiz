@@ -29,7 +29,7 @@ button {
     transition: all .25s ease-out;
 }
 
-.start-game-container {
+.startgame-container {
     background-color: #b5838d;
     padding: 20px;
     border-radius: 10px;
