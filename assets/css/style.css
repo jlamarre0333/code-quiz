@@ -35,7 +35,11 @@ button {
     border-radius: 10px;
     color: #ffcdb2;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    animation: scale .3s ease-in forwards;
 }
+
+
+
 button:hover {
     background-color: #d87175;
     color: white;
@@ -65,13 +69,14 @@ button:hover {
     list-style: none;
     width: 80vw;
     padding: 0;
+    border-radius: 10px;
 }
 
 .highscore-item {
     display: flex;
    color: white;
     list-style: none;
-    background-color: #444444;
+    background-color: #b5838d;
     padding-left: 20px;
 }
 
@@ -83,10 +88,36 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: scale .3s ease-in forwards;
+    height: 80%;
+    
+    
+}
+
+.endgame-label {
+    display: flex;
+    flex-direction: column;
+}
+
+#clear-high-scores {
+    position: absolute;
+    bottom: 5%;
+}
+
+#initials-input {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin: 10px 0px;
+}
+
+h1 {
+    color: white;
 }
 
 .highscore-item:nth-child(odd) {
-    background-color: #817f7f;
+    background-color: #5e5a64;
 }
 
 
@@ -95,6 +126,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     min-width: 70%;
+    animation: scale .3s ease-in forwards;
+    color: white;
 
 }
 
@@ -102,3 +135,27 @@ hr {
     width: 100%;
     margin: 20px 0;
 }
+
+#end-game {
+    animation: scale .3s ease-in forwards;
+    background-color: #b5838d;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffcdb2;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+
+@keyframes scale {
+    0% {
+      transform: scale(.5);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1)
+    }
+  }
+
+  
