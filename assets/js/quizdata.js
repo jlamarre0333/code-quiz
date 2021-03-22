@@ -1,60 +1,60 @@
 const quizItems = [{
-    q: "How much am I going to make as a dev next year",
-    a: "1,000,000",
+    q: "Which is the most specific CSS selector?",
+    a: "#element",
     options: [
-        '500,000',
-        '100,000',
-        '1,000,000',
-        '10,000,000',
+        '.element',
+        '#element',
+        'element',
+        '$element',
     ]
 },
 {
-    q: "Whats my favorite library?",
-    a: "react",
+    q: "Which HTML tag do you use to import a JavaScript file?",
+    a: "<link>",
     options: [
-        'react',
-        'node',
-        'express',
-        'mongodb',
+        '<p>',
+        '<javascript>',
+        '<script>',
+        '<link>',
     ]
 },
 {
-    q: "What type of watch am I going to buy next year",
-    a: "rolex",
+    q: "How can you selct an element from the DOM by it's class name?",
+    a: "document.querySelector('.element')",
     options: [
-        'rolex',
-        'apple watch',
-        'swiss',
-        'g-shock',
+        '$element',
+        "document.getElementbyId('element')",
+        "document.querySelector('.element')",
+        "document.querySelector('element')",
     ]
 }, {
-    q: "How much am I going to make as a dev next year",
-    a: "1,000,000",
+    q: "Which of these services can be used to deploy your production application?",
+    a: "Github Pages",
     options: [
-        '500,000',
-        '100,000',
-        '1,000,000',
-        '10,000,000',
+        'Material-UI',
+        'Github Pages',
+        'CSS',
+        'Bootstrap',
     ]
 },
 {
-    q: "Whats my favorite library?",
-    a: "react",
+    q: "Which one of these libraries is maintained Facebook?",
+    a: "React",
     options: [
-        'react',
-        'node',
-        'express',
-        'mongodb',
+        'React',
+        'Node',
+        'Express',
+        'Mongodb',
     ]
 },
 {
-    q: "What type of watch am I going to buy next year",
-    a: "rolex",
+    q: "Which terminal command can you use to undo your last git commit?",
+    a: "git reset --soft HEAD~1",
     options: [
-        'rolex',
-        'apple watch',
-        'swiss',
-        'g-shock',
+        'git go-back --soft',
+        'git checkout -b',
+        'git commit-STOP-IT',
+        'git reset --soft HEAD~1',
     ]
 }]
 
